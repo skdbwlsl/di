@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id = "st01" class = "com.care.root02.Student"/>    <!-- bean : student객체 만들기. id="변수이름" class="경로이름" -->
+	<bean id = "stb" class = "com.care.root02.STBean">       <!-- STBean객체 만들기 -->
+		<property name="st" ref ="st01"/>                    <!-- property : STBean이 갖고있는 변수 설정. 연결. st변수에 st01을 연결(ref) -->
+	
+		<!--변수 세팅 공간 -->
+		<property name="name">
+			<value>홍길동구리구리</value>   <!--나눠서 작성도 가능하고 -->   
+		</property>
+		<property name="age" value = "2222"/>   <!--세터가 있어야지만 들어온다 --><!--한번에 작성도 가능 -->
+	</bean>   
+
+</beans>
